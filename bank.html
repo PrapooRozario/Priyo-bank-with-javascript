@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIYO BANK</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+  <!-- Error massage -->
+<div>
+    <p id="error-msg" class="bg-red-200 text-center p-2 font-medium invisible">Invalid amount. Please enter a valid number.</p>
+</div>
+
+    <section class="container w-4/5 mx-auto">
+        <!-- Deposit card -->
+    <div class=" mt-16 flex gap-20">
+    <div class="card rounded-lg bg-indigo-500 text-white w-80 h-32 justify-center">
+        <div class="card-body">
+          <h2 class="text-xl font-semibold">Deposit</h2>
+          <h1 class="text-4xl font-semibold">$<span id="deposit-balance">00</span></h1>
+        </div>
+      </div>
+      <!-- Withdraw card -->
+    <div class="card rounded-lg bg-orange-400 text-white w-80 h-32 justify-center">
+        <div class="card-body">
+          <h2 class="text-xl font-semibold">Withdraw</h2>
+          <h1 class="text-4xl font-semibold">$<span id="withdraw-balance">00</span></h1>
+        </div>
+      </div>
+      <!-- Balance card -->
+    <div class="card rounded-lg bg-yellow-500 text-white w-80 h-32 justify-center">
+        <div class="card-body">
+          <h2 class="text-xl font-semibold">Balance</h2>
+          <h1 class="text-4xl font-semibold">$<span id="balance">00</span></h1>
+        </div>
+      </div>
+
+    </div>
+
+  <!-- Deposit & Withdraw -->
+<div class="mt-14 flex gap-10">
+     <!-- Diposit -->
+    <div class="bg-gray-200 w-1/2 px-10 py-12 rounded-xl">
+        <h1 class="text-2xl font-semibold mb-4">Deposit</h1>
+        <label class="form-control w-full max-w-xs mb-6">
+            <input id="deposit-amount" type="number" placeholder="$Deposit amount" class="input input-bordered w-full max-w-xs" />
+        </label>
+        <button id="deposit-btn" class="px-6 py-2 bg-green-600 text-white rounded-md">Deposit</button>
+    </div>
+     <!-- Withdraw -->
+    <div class="bg-gray-200 w-1/2 px-10 py-14 rounded-xl">
+        <h1 class="text-2xl font-semibold mb-4">Withdraw</h1>
+        <label class="form-control w-full max-w-xs mb-6">
+            <input id="withdraw-amount" type="number" placeholder="$Withdraw amount" class="input input-bordered w-full max-w-xs" />
+        </label>
+        <button id="withdraw-btn" class="px-6 py-2 bg-green-600 text-white rounded-md">Withdraw</button>
+    </div>
+
+</div>
+</section>
+
+<script src="Javascripts/bank.js"></script>
+
+</body>
+</html>
